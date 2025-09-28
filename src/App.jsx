@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Sidebar from './components/Sidebar'
-import Player from './components/player'
+import Player from './components/Player'
 import Display from './components/Display'
 import { playerContext } from './context/PlayerContext'
 import { jwtDecode } from 'jwt-decode'
