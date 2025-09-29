@@ -12,7 +12,6 @@ const PlayerContextProvider = (props) => {
 
     const songs = data?.allSongs || [];
     const [track, setTrack] = useState(null);
-    console.log(track);
     const [playStatus, setPlayStatus] = useState(false);
     const [time, setTime] = useState({
         currentTime: { second: "00", minute: 0 },

@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react'
 import { playerContext } from '../context/PlayerContext';
 
 const SongItems = ({ song, albums }) => {
-    console.log(song);
     const { playWithId } = useContext(playerContext);
     const [isPlaying, setIsPlaying] = useState(false);
 

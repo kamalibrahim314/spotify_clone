@@ -64,7 +64,7 @@ const AuthModal = ({ show, onClose, setUser }) => {
             if (res?.accessToken) {
                 Cookies.set("accessToken", res.accessToken, {
                     expires: 15,
-                    secure: process.env.NODE_ENV === "production",
+                    secure: import.meta.env.NODE_ENV === "production",
                     sameSite: "strict",
                 });
 
