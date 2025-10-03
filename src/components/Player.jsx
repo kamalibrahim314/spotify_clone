@@ -12,6 +12,7 @@ import { playerContext } from "../context/PlayerContext";
 
 const Player = () => {
     const { track, seekBG, seekBar, playStatus, play, pause, time, previous, next, seekSong, audioRef } = useContext(playerContext);
+    console.log(track);
 
     // Load volume from localStorage or default to 0.7
     const [volume, setVolume] = useState(() => {
@@ -64,7 +65,7 @@ const Player = () => {
                 />
                 <div className="min-w-0">
                     <p className="font-semibold text-sm truncate">{track?.name}</p>
-                    <p className="text-xs text-gray-400 truncate">{track?.artist || "Unknown Artist"}</p>
+                    <p className="text-xs text-gray-400 truncate">{track?.desc.split(" ").slice(0, 3).join(" ") || ""}</p>
                 </div>
             </div>
 
