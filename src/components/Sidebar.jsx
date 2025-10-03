@@ -6,6 +6,7 @@ import { LuLibraryBig, LuUserCog } from 'react-icons/lu'
 import { MdDashboard, MdAdminPanelSettings } from 'react-icons/md'
 import { useNavigate, useLocation } from 'react-router-dom'
 const Sidebar = ({ user, onLogoutClick }) => {
+    console.log("user:", user);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -22,7 +23,6 @@ const Sidebar = ({ user, onLogoutClick }) => {
         e.preventDefault();
         if (query.trim()) {
             console.log("Searching for:", query);
-            // هنا ممكن تعمل navigate(`/search?query=${query}`) أو API call
             navigate(`/search?query=${query}`);
         }
     };
