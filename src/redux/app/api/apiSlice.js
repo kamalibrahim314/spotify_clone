@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import Cookies from 'js-cookie';
 
-const baseUrl = import.meta.env.REACT_APP_API_URL || 'https://spotify-backend-wine.vercel.app';
+const baseUrl = import.meta.env.REACT_APP_API_URL || 'https://spotify-backend-wine.vercel.app/';
 
 const baseQuery = fetchBaseQuery({
     baseUrl,

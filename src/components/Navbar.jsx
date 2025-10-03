@@ -14,7 +14,8 @@ const Navbar = ({ user, onLoginClick, onLogoutClick }) => {
                 </div>
                 <div className='flex items-center gap-4'>
                     <p className='bg-white text-black text-[15px] px-4 py-1 rounded-2xl hidden md:block font-bold hover:cursor-pointer'>Explore Premium</p>
-                    <p className='bg-black text-[15px] px-3 py-1 rounded-2xl hover:cursor-pointer'>Install App</p>
+                    <p className='hidden lg:block bg-black text-[15px] px-3 py-1 rounded-2xl hover:cursor-pointer'>Install App</p>
+                    <p onClick={() => navigate('/dashboard')} className='block lg:hidden bg-black text-[15px] px-3 py-1 rounded-2xl hover:cursor-pointer'>Dashboard</p>
                     {user
                         ? (
                             <>
