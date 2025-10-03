@@ -81,6 +81,7 @@ const AuthModal = ({ show, onClose, setUser }) => {
             }
         } catch (err) {
             toast.error(err?.data?.message || "فشل العملية");
+            setServerError(err?.data?.message || "فشل العملية");
             console.log(err);
         } finally {
             setIsLoading(false);
